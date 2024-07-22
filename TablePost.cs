@@ -12,8 +12,6 @@ namespace UDTnFGenerator.Helper.SAPData
     /// 7: ?? No.
     public class TablePost
     {
-        readonly string yesOrNoOrNAOptionStr = "Y-Yes|N-No|A-N/A";
-        readonly string yesOrNoOptionStr = "Y-Yes|N-No";
         /// <summary>
         /// Create UDTs for SAP
         /// </summary>

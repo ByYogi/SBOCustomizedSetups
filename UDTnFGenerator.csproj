@@ -105,7 +105,7 @@
     <Compile Include="Helper\ConfigData\SAPConfigCls.cs" />
     <Compile Include="Helper\ConsoleHelper\RecordHtml.cs" />
     <Compile Include="Helper\SAPData\CreateUDFUtilities.cs" />
-    <Compile Include="Helper\SAPData\TablePost.cs" />
+    <Compile Include="TablePost.cs" />
     <Compile Include="Helper\SAPData\SAPObjectCreator.cs" />
     <Compile Include="Model\UDFInfo.cs" />
     <Compile Include="Program.cs" />

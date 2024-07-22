@@ -137,6 +137,22 @@ namespace UDTnFGenerator.Helper.SAPData
             //Declarations for SQL As Boolean
             try
             {
+                //Determined if is UDF to sub '@' string
+                string nonAtTableName = tableName;
+                if (nonAtTableName.StartsWith("@"))
+                {
+                    nonAtTableName = nonAtTableName.Substring(1);
+                    //Verifying the table is exists
+                    string verifyingTableSql = $"select * from OUTB where TableName = '{nonAtTableName}'";
+                    oRecset.DoQuery(verifyingTableSql);
+                    //Execute Selected Query
+                    if (oRecset.RecordCount == 0)
+                    {
+                        outputMsg = $"UDT {tableName} is not Exists.";
+                        throw new Exception(outputMsg);
+                    }
+                }
+
                 string sqlScript = @"select Top 1 ""FieldID"" from " + Company.CompanyDB + ".dbo" + @".CUFD where ""TableID"" = '" + tableName + @"' and ""AliasID"" = '" + fieldName + "'";
                 oRecset.DoQuery(sqlScript);
                 //Execute Selected Query

@@ -1,0 +1,19 @@
+*.csproj.user
+.vs
+# Published data
+App_Data/
+Properties/PublishProfiles/
+# Build results
+bin/
+obj/
+Logs/
+*/Properties/PublishProfiles/
+
+# Build depend
+packages/
+
+# file
+*.xlsx
+*.API.xml
+
+
